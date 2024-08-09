@@ -18,13 +18,13 @@ export class ProductDetailComponent implements OnInit {
   private _apiService = inject(ApiService);
 
   ngOnInit(): void {
-     this._router.params.subscribe( params=>{
-      this._apiService.getProduct( params['id']).subscribe((data:IProducto)=>{
-        this.product= data
-        //  console.log(data)
-        this.loading = false;
+      this._router.params.subscribe( params=>{
+       this._apiService.getProduct( params['id']).subscribe((data:IProducto)=>{
+          this.product= data
+          console.log(data)
+         this.loading = false;
 
+       })
       })
-     })
   }
 }

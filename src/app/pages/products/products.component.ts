@@ -19,13 +19,13 @@ export class ProductsComponent {
 
   ngOnInit(): void {
     this._apiService.getproducts().subscribe((data: IProducto[]) => {
-      // console.log(data);
-      this.productList = data;
+      //  console.log(data);
+       this.productList = data;
     });
   }
   navegate(id:number){
-  //  console.log(id);
-  this._router.navigate(['/products',id])
+    // console.log(id);
+   this._router.navigate(['/products',id])
 
   }
 }
